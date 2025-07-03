@@ -56,7 +56,8 @@ const Hero = () => {
               <img
                 src="https://i.postimg.cc/PqvP08f3/cartoon-removebg-preview.png"
                 alt="Naitik Patel - Creative Designer"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto"
+                style={{ backgroundColor: 'transparent' }}
               />
             </div>
             {/* Decorative Elements */}
