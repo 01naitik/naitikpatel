@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
-import ProfileImageProcessor from './ProfileImageProcessor';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,12 +49,12 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Side - Profile Image with Background Removal */}
+        {/* Right Side - Cartoon Image */}
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative">
             <div className="w-full max-w-md mx-auto">
-              <ProfileImageProcessor
-                originalImageSrc="/lovable-uploads/b6065737-96ca-40b6-a6f6-960ecabecf3c.png"
+              <img
+                src="https://i.postimg.cc/PqvP08f3/cartoon-removebg-preview.png"
                 alt="Naitik Patel - Creative Designer"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
