@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -24,7 +25,7 @@ const Portfolio = () => {
       title: 'Branding Kit for Sketch Artist',
       category: 'branding',
       description: 'Complete brand identity package including logo, business cards, and style guide for a professional sketch artist.',
-      image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
+      image: 'bg-gradient-to-br from-blue-100 to-purple-100',
       tags: ['Logo Design', 'Brand Identity', 'Print Design']
     },
     {
@@ -64,7 +65,7 @@ const Portfolio = () => {
       title: '3D Product Mockups',
       category: 'motion',
       description: 'High-quality 3D product mockups created in Blender for various branding projects.',
-      image: 'bg-gradient-to-br from-indigo-100 to-purple-100',
+      image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
       tags: ['3D Design', 'Blender', 'Product Mockup']
     }
   ];
