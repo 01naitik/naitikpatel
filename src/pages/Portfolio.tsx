@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -25,7 +24,7 @@ const Portfolio = () => {
       title: 'Branding Kit for Sketch Artist',
       category: 'branding',
       description: 'Complete brand identity package including logo, business cards, and style guide for a professional sketch artist.',
-      image: 'bg-gradient-to-br from-blue-100 to-purple-100',
+      image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
       tags: ['Logo Design', 'Brand Identity', 'Print Design']
     },
     {
@@ -118,7 +117,14 @@ const Portfolio = () => {
                 >
                   <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
                     {/* Project Image */}
-                    <div className={`h-64 ${project.image} relative overflow-hidden`}>
+                    <div className={`h-64 relative overflow-hidden ${project.image.startsWith('http') ? '' : project.image}`}>
+                      {project.image.startsWith('http') ? (
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : null}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
                         <ExternalLink className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                       </div>
