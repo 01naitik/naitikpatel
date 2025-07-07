@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -41,7 +40,7 @@ const Portfolio = () => {
       title: 'Logo Design Collection',
       category: 'branding',
       description: '20+ unique logo designs created for various organizations across different industries.',
-      image: 'bg-gradient-to-br from-purple-100 to-pink-100',
+      image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg',
       tags: ['Logo Design', 'Brand Identity', 'Typography']
     },
     {
