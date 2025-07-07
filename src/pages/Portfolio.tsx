@@ -24,7 +24,7 @@ const Portfolio = () => {
       title: 'Branding Kit for Sketch Artist',
       category: 'branding',
       description: 'Complete brand identity package including logo, business cards, and style guide for a professional sketch artist.',
-      image: 'bg-gradient-to-br from-blue-100 to-purple-100',
+      image: 'https://i.postimg.cc/8Cbsc679/c9144e52-3345-4dfc-b1bf-c8595cdc00dd.jpg',
       tags: ['Logo Design', 'Brand Identity', 'Print Design']
     },
     {
