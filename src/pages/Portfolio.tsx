@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -49,7 +48,7 @@ const Portfolio = () => {
       title: 'YouTube Stream Layouts',
       category: 'graphics',
       description: 'Complete streaming package with chat boxes, webcam frames, animated alerts, banners, and thumbnails.',
-      image: 'bg-gradient-to-br from-red-100 to-orange-100',
+      image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
       tags: ['Stream Design', 'Motion Graphics', 'UI Design']
     },
     {
