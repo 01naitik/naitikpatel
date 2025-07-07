@@ -32,7 +32,7 @@ const Portfolio = () => {
       title: 'Clothing Brand Creative Package',
       category: 'branding',
       description: 'Full creative package including posters, T-shirt designs, stickers, 3D mockups, and website design.',
-      image: 'bg-gradient-to-br from-green-100 to-blue-100',
+      image: 'https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg',
       tags: ['Brand Package', 'T-shirt Design', '3D Mockups', 'Website']
     },
     {
