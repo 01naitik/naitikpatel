@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -56,7 +57,7 @@ const Portfolio = () => {
       title: 'E-commerce Website',
       category: 'web',
       description: 'Modern, responsive e-commerce website with clean design and seamless user experience.',
-      image: 'bg-gradient-to-br from-teal-100 to-cyan-100',
+      image: 'https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg',
       tags: ['Web Design', 'E-commerce', 'Responsive']
     },
     {
