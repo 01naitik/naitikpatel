@@ -15,46 +15,16 @@ const Index = () => {
 
   const portfolioItems = [
     {
-      id: 1,
-      title: 'Branding Kit',
-      description: 'Complete brand identity for sketch artist',
-      image: 'https://i.postimg.cc/8Cbsc679/c9144e52-3345-4dfc-b1bf-c8595cdc00dd.jpg',
-      link: '/portfolio/branding-kit'
-    },
-    {
-      id: 2,
-      title: 'Clothing Brand',
-      description: 'Full creative package with 3D mockups',
-      image: 'https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg',
-      link: '/portfolio/clothing-brand'
+      id: 5,
+      title: 'E-commerce Website',
+      description: 'Modern responsive web design',
+      image: 'https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg'
     },
     {
       id: 3,
       title: 'Logo Collection',
       description: '20+ unique logo designs',
-      image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg',
-      link: '/portfolio/logo-collection'
-    },
-    {
-      id: 4,
-      title: 'YouTube Stream Layouts',
-      description: 'Complete streaming package design',
-      image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
-      link: '/portfolio/youtube-layouts'
-    },
-    {
-      id: 5,
-      title: 'E-commerce Website',
-      description: 'Modern responsive web design',
-      image: 'https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg',
-      link: '/portfolio/ecommerce-website'
-    },
-    {
-      id: 6,
-      title: '3D Product Mockups',
-      description: 'High-quality 3D product visualization',
-      image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
-      link: '/portfolio/3d-mockups'
+      image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg'
     }
   ];
 
@@ -94,11 +64,11 @@ const Index = () => {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-12 tracking-tight">Selected Work</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {portfolioItems.map((item) => (
               <Link 
                 key={item.id}
-                to={item.link}
+                to="/portfolio"
                 className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div className="h-48 overflow-hidden rounded-t-lg">

@@ -1,5 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 
 const Portfolio = () => {
@@ -25,7 +27,8 @@ const Portfolio = () => {
       category: 'branding',
       description: 'Complete brand identity package including logo, business cards, and style guide for a professional sketch artist.',
       image: 'https://i.postimg.cc/8Cbsc679/c9144e52-3345-4dfc-b1bf-c8595cdc00dd.jpg',
-      tags: ['Logo Design', 'Brand Identity', 'Print Design']
+      tags: ['Logo Design', 'Brand Identity', 'Print Design'],
+      link: '/portfolio/branding-kit'
     },
     {
       id: 2,
@@ -33,7 +36,8 @@ const Portfolio = () => {
       category: 'branding',
       description: 'Full creative package including posters, T-shirt designs, stickers, 3D mockups, and website design.',
       image: 'https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg',
-      tags: ['Brand Package', 'T-shirt Design', '3D Mockups', 'Website']
+      tags: ['Brand Package', 'T-shirt Design', '3D Mockups', 'Website'],
+      link: '/portfolio/clothing-brand'
     },
     {
       id: 3,
@@ -41,7 +45,8 @@ const Portfolio = () => {
       category: 'branding',
       description: '20+ unique logo designs created for various organizations across different industries.',
       image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg',
-      tags: ['Logo Design', 'Brand Identity', 'Typography']
+      tags: ['Logo Design', 'Brand Identity', 'Typography'],
+      link: '/portfolio/logo-collection'
     },
     {
       id: 4,
@@ -49,7 +54,8 @@ const Portfolio = () => {
       category: 'graphics',
       description: 'Complete streaming package with chat boxes, webcam frames, animated alerts, banners, and thumbnails.',
       image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
-      tags: ['Stream Design', 'Motion Graphics', 'UI Design']
+      tags: ['Stream Design', 'Motion Graphics', 'UI Design'],
+      link: '/portfolio/youtube-layouts'
     },
     {
       id: 5,
@@ -57,7 +63,8 @@ const Portfolio = () => {
       category: 'web',
       description: 'Modern, responsive e-commerce website with clean design and seamless user experience.',
       image: 'https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg',
-      tags: ['Web Design', 'E-commerce', 'Responsive']
+      tags: ['Web Design', 'E-commerce', 'Responsive'],
+      link: '/portfolio/ecommerce-website'
     },
     {
       id: 6,
@@ -65,7 +72,8 @@ const Portfolio = () => {
       category: 'motion',
       description: 'High-quality 3D product mockups created in Blender for various branding projects.',
       image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
-      tags: ['3D Design', 'Blender', 'Product Mockup']
+      tags: ['3D Design', 'Blender', 'Product Mockup'],
+      link: '/portfolio/3d-mockups'
     }
   ];
 
@@ -110,21 +118,20 @@ const Portfolio = () => {
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project, index) => (
-                <div
+                <Link
                   key={project.id}
+                  to={project.link}
                   className="group cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
                     {/* Project Image */}
-                    <div className={`h-64 relative overflow-hidden ${project.image.startsWith('http') ? '' : project.image}`}>
-                      {project.image.startsWith('http') ? (
-                        <img 
-                          src={project.image} 
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : null}
+                    <div className="h-64 relative overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
                         <ExternalLink className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-8 w-8" />
                       </div>
@@ -152,7 +159,7 @@ const Portfolio = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
