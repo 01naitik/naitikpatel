@@ -1,18 +1,25 @@
+
 import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 200);
     return () => clearTimeout(timer);
   }, []);
+
   const scrollToNext = () => {
     window.scrollTo({
       top: window.innerHeight,
       behavior: 'smooth'
     });
   };
-  return <section className="min-h-screen flex items-center justify-center relative pt-16 px-6">
+
+  return (
+    <section className="min-h-screen flex items-center justify-center relative pt-16 px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Side - Text Content */}
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -28,12 +35,18 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <a href="mailto:naitikpatel1312@gmail.com" className="bg-black text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-300">
+            <Link 
+              to="/contact"
+              className="bg-black text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-300"
+            >
               Start a Project
-            </a>
-            <a href="#portfolio" className="border border-gray-300 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-300">
+            </Link>
+            <Link 
+              to="/portfolio"
+              className="border border-gray-300 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-300"
+            >
               View Work
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -41,11 +54,16 @@ const Hero = () => {
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="relative">
             <div className="w-full max-w-md mx-auto">
-              <img alt="Naitik Patel - Creative Designer" className="w-full h-auto" style={{
-              backgroundColor: 'transparent',
-              filter: 'contrast(1.1) saturate(1.2) brightness(1.05)',
-              imageRendering: 'crisp-edges'
-            }} src="https://i.postimg.cc/ZnynXmst/cartoon-removebg-preview-1-1.png" />
+              <img 
+                alt="Naitik Patel - Creative Designer" 
+                className="w-full h-auto" 
+                style={{
+                  backgroundColor: 'transparent',
+                  filter: 'contrast(1.1) saturate(1.2) brightness(1.05)',
+                  imageRendering: 'crisp-edges'
+                }} 
+                src="https://i.postimg.cc/ZnynXmst/cartoon-removebg-preview-1-1.png" 
+              />
             </div>
             {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-60 -z-10"></div>
@@ -61,6 +79,8 @@ const Hero = () => {
           <ChevronDown className="h-6 w-6 animate-bounce group-hover:translate-y-1 transition-transform duration-300" />
         </button>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
