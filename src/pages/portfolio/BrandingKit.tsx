@@ -11,6 +11,39 @@ const BrandingKit = () => {
     setIsVisible(true);
   }, []);
 
+  const workItems = [
+    {
+      id: 1,
+      title: 'Logo Variations',
+      description: 'Primary and secondary logo designs with different orientations',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'Business Card Design',
+      description: 'Professional business card layout with brand elements',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Brand Style Guide',
+      description: 'Comprehensive guide including colors, typography, and usage',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+    },
+    {
+      id: 4,
+      title: 'Letterhead Design',
+      description: 'Professional letterhead incorporating brand identity',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Brand Mockups',
+      description: 'Real-world application mockups of the brand identity',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -55,8 +88,36 @@ const BrandingKit = () => {
             </div>
           </div>
 
-          {/* Project Details */}
+          {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="mb-12">
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Project Components</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {workItems.map((item, index) => (
+                  <div 
+                    key={item.id}
+                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Project Details */}
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div>
                 <h2 className="text-2xl font-medium mb-4">Project Overview</h2>

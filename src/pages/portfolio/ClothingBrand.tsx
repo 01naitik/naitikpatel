@@ -11,6 +11,39 @@ const ClothingBrand = () => {
     setIsVisible(true);
   }, []);
 
+  const workItems = [
+    {
+      id: 1,
+      title: 'T-Shirt Designs',
+      description: 'Creative apparel designs with unique graphics and typography',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'Marketing Posters',
+      description: 'Eye-catching promotional materials for brand campaigns',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Sticker Collection',
+      description: 'Brand merchandise stickers for promotional use',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+    },
+    {
+      id: 4,
+      title: '3D Product Mockups',
+      description: 'Realistic 3D renderings of apparel and merchandise',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Website Design',
+      description: 'Complete e-commerce website design and layout',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -52,7 +85,35 @@ const ClothingBrand = () => {
             </div>
           </div>
 
+          {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="mb-12">
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Package Components</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {workItems.map((item, index) => (
+                  <div 
+                    key={item.id}
+                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div>
                 <h2 className="text-2xl font-medium mb-4">Project Overview</h2>

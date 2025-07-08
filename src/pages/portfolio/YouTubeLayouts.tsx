@@ -11,6 +11,39 @@ const YouTubeLayouts = () => {
     setIsVisible(true);
   }, []);
 
+  const workItems = [
+    {
+      id: 1,
+      title: 'Stream Overlays',
+      description: 'Custom overlay designs for live streaming platforms',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+    },
+    {
+      id: 2,
+      title: 'Chat Box Frames',
+      description: 'Interactive chat display frames and webcam borders',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+    },
+    {
+      id: 3,
+      title: 'Animated Alerts',
+      description: 'Dynamic notification alerts for followers and donations',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+    },
+    {
+      id: 4,
+      title: 'Stream Banners',
+      description: 'Professional banners and panel designs for stream profiles',
+      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+    },
+    {
+      id: 5,
+      title: 'Thumbnail Templates',
+      description: 'Eye-catching thumbnail designs for YouTube videos',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -52,7 +85,35 @@ const YouTubeLayouts = () => {
             </div>
           </div>
 
+          {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="mb-12">
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Streaming Assets</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {workItems.map((item, index) => (
+                  <div 
+                    key={item.id}
+                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className={`transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div>
                 <h2 className="text-2xl font-medium mb-4">Project Overview</h2>
