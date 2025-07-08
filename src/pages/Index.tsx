@@ -13,6 +13,51 @@ const Index = () => {
     setIsVisible(true);
   }, []);
 
+  const portfolioItems = [
+    {
+      id: 1,
+      title: 'Branding Kit',
+      description: 'Complete brand identity for sketch artist',
+      image: 'https://i.postimg.cc/8Cbsc679/c9144e52-3345-4dfc-b1bf-c8595cdc00dd.jpg',
+      link: '/portfolio/branding-kit'
+    },
+    {
+      id: 2,
+      title: 'Clothing Brand',
+      description: 'Full creative package with 3D mockups',
+      image: 'https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg',
+      link: '/portfolio/clothing-brand'
+    },
+    {
+      id: 3,
+      title: 'Logo Collection',
+      description: '20+ unique logo designs',
+      image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg',
+      link: '/portfolio/logo-collection'
+    },
+    {
+      id: 4,
+      title: 'YouTube Stream Layouts',
+      description: 'Complete streaming package design',
+      image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
+      link: '/portfolio/youtube-layouts'
+    },
+    {
+      id: 5,
+      title: 'E-commerce Website',
+      description: 'Modern responsive web design',
+      image: 'https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg',
+      link: '/portfolio/ecommerce-website'
+    },
+    {
+      id: 6,
+      title: '3D Product Mockups',
+      description: 'High-quality 3D product visualization',
+      image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
+      link: '/portfolio/3d-mockups'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -50,23 +95,25 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-12 tracking-tight">Selected Work</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4"></div>
-              <h3 className="text-xl font-medium mb-2">Branding Kit</h3>
-              <p className="text-gray-600">Complete brand identity for sketch artist</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg mb-4"></div>
-              <h3 className="text-xl font-medium mb-2">Clothing Brand</h3>
-              <p className="text-gray-600">Full creative package with 3D mockups</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg mb-4"></div>
-              <h3 className="text-xl font-medium mb-2">Logo Collection</h3>
-              <p className="text-gray-600">20+ unique logo designs</p>
-            </div>
+            {portfolioItems.map((item) => (
+              <Link 
+                key={item.id}
+                to={item.link}
+                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+              >
+                <div className="h-48 overflow-hidden rounded-t-lg">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-medium mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              </Link>
+            ))}
           </div>
           
           <Link 
