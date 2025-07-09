@@ -14,33 +14,39 @@ const ClothingBrand = () => {
   const workItems = [
     {
       id: 1,
-      title: 'T-Shirt Designs',
+      title: 'T-Shirt Design Collection',
       description: 'Creative apparel designs with unique graphics and typography',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
     },
     {
       id: 2,
-      title: 'Marketing Posters',
-      description: 'Eye-catching promotional materials for brand campaigns',
+      title: 'Brand Identity Package',
+      description: 'Complete brand identity including logo and visual guidelines',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
     },
     {
       id: 3,
-      title: 'Sticker Collection',
-      description: 'Brand merchandise stickers for promotional use',
+      title: 'Marketing Materials',
+      description: 'Eye-catching promotional materials for brand campaigns',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
     },
     {
       id: 4,
-      title: '3D Product Mockups',
-      description: 'Realistic 3D renderings of apparel and merchandise',
+      title: 'Merchandise Design',
+      description: 'Brand merchandise and promotional items design',
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
     },
     {
       id: 5,
-      title: 'Website Design',
-      description: 'Complete e-commerce website design and layout',
+      title: '3D Product Mockups',
+      description: 'Realistic 3D renderings of apparel and merchandise',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'Digital Presence',
+      description: 'Complete e-commerce website design and layout',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
     }
   ];
 
@@ -61,13 +67,13 @@ const ClothingBrand = () => {
           </div>
 
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight">Clothing Brand Creative Package</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight">Clothing Brand Creative Packages and T-Shirt Designs</h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Full creative package including posters, T-shirt designs, stickers, 3D mockups, and website design.
+              Complete creative packages including T-shirt designs, branding materials, and visual identity elements.
             </p>
             
             <div className="flex flex-wrap gap-2 mb-12">
-              {['Brand Package', 'T-shirt Design', '3D Mockups', 'Website'].map((tag) => (
+              {['Brand Package', 'T-shirt Design', 'Creative Design'].map((tag) => (
                 <span key={tag} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm">
                   {tag}
                 </span>
@@ -79,7 +85,7 @@ const ClothingBrand = () => {
             <div className="mb-12">
               <img 
                 src="https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg" 
-                alt="Clothing Brand Creative Package"
+                alt="Clothing Brand Creative Packages and T-Shirt Designs"
                 className="w-full rounded-2xl shadow-lg"
               />
             </div>
@@ -88,7 +94,7 @@ const ClothingBrand = () => {
           {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
-              <h2 className="text-3xl font-light mb-8 tracking-tight">Package Components</h2>
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Design Collection</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {workItems.map((item, index) => (
                   <div 
@@ -118,18 +124,18 @@ const ClothingBrand = () => {
               <div>
                 <h2 className="text-2xl font-medium mb-4">Project Overview</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  A comprehensive creative package for a streetwear clothing brand that needed a complete visual identity 
-                  and marketing materials. The project encompassed everything from product design to digital presence.
+                  A comprehensive creative package for clothing brands that includes T-shirt designs, branding materials, 
+                  and complete visual identity. The project encompasses everything from product design to digital presence.
                 </p>
               </div>
               <div>
                 <h2 className="text-2xl font-medium mb-4">Deliverables</h2>
                 <ul className="text-gray-600 space-y-2">
                   <li>• T-shirt and apparel designs</li>
-                  <li>• Marketing posters and banners</li>
-                  <li>• Sticker and merchandise designs</li>
+                  <li>• Brand identity packages</li>
+                  <li>• Marketing and promotional materials</li>
                   <li>• 3D product mockups</li>
-                  <li>• Website design and layout</li>
+                  <li>• Digital presence and website design</li>
                 </ul>
               </div>
             </div>

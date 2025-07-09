@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,39 +14,15 @@ const ThreeDMockups = () => {
   const workItems = [
     {
       id: 1,
-      title: 'Product Packaging',
-      description: '3D rendered packaging designs for consumer products',
+      title: 'Product Packaging Mockup',
+      description: '3D rendered packaging designs for consumer products with realistic lighting',
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
     },
     {
       id: 2,
-      title: 'Brand Mockups',
-      description: 'Realistic brand application mockups in 3D environments',
+      title: 'Brand Application Mockup',
+      description: 'Realistic brand application mockups in 3D environments with custom materials',
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
-    },
-    {
-      id: 3,
-      title: 'Product Visualization',
-      description: 'High-quality 3D product renders for marketing materials',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
-    },
-    {
-      id: 4,
-      title: 'Environmental Design',
-      description: '3D scene creation with custom lighting and materials',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
-    },
-    {
-      id: 5,
-      title: 'Cosmetic Product Mockups',
-      description: 'Premium cosmetic and beauty product 3D visualizations',
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=300&fit=crop'
-    },
-    {
-      id: 6,
-      title: 'Tech Product Renders',
-      description: 'Sleek technology and electronics product mockups',
-      image: 'https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=400&h=300&fit=crop'
     }
   ];
 
@@ -93,24 +70,24 @@ const ThreeDMockups = () => {
           {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
-              <h2 className="text-3xl font-light mb-8 tracking-tight">3D Design Services</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <h2 className="text-3xl font-light mb-8 tracking-tight">3D Design Showcase</h2>
+              <div className="grid md:grid-cols-2 gap-8">
                 {workItems.map((item, index) => (
                   <div 
                     key={item.id}
                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    style={{ animationDelay: `${index * 200}ms` }}
                   >
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-64 overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    <div className="p-6">
+                      <h3 className="text-xl font-medium mb-3">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>
                 ))}

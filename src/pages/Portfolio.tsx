@@ -32,29 +32,29 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Clothing Brand Creative Package',
+      title: 'Clothing Brand Creative Packages and T-Shirt Designs',
       category: 'branding',
-      description: 'Full creative package including posters, T-shirt designs, stickers, 3D mockups, and website design.',
+      description: 'Complete creative packages including T-shirt designs, branding materials, and visual identity elements.',
       image: 'https://i.postimg.cc/MGSdx7SB/Whats-App-Image-2025-07-07-at-6-43-53-PM.jpg',
-      tags: ['Brand Package', 'T-shirt Design', '3D Mockups', 'Website'],
+      tags: ['Brand Package', 'T-shirt Design', 'Creative Design'],
       link: '/portfolio/clothing-brand'
     },
     {
       id: 3,
       title: 'Logo Design Collection',
       category: 'branding',
-      description: '20+ unique logo designs created for various organizations across different industries.',
+      description: 'A curated collection of logo designs created for various organizations across different industries.',
       image: 'https://i.postimg.cc/kGj0ZjRq/Whats-App-Image-2025-06-24-at-2-52-16-PM.jpg',
       tags: ['Logo Design', 'Brand Identity', 'Typography'],
       link: '/portfolio/logo-collection'
     },
     {
       id: 4,
-      title: 'YouTube Stream Layouts',
+      title: 'YouTube Thumbnails and Layouts',
       category: 'graphics',
-      description: 'Complete streaming package with chat boxes, webcam frames, animated alerts, banners, and thumbnails.',
+      description: 'Eye-catching YouTube thumbnails and streaming layouts designed to boost engagement and views.',
       image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
-      tags: ['Stream Design', 'Motion Graphics', 'UI Design'],
+      tags: ['Thumbnail Design', 'YouTube', 'Graphics'],
       link: '/portfolio/youtube-layouts'
     },
     {
@@ -74,6 +74,15 @@ const Portfolio = () => {
       image: 'https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg',
       tags: ['3D Design', 'Blender', 'Product Mockup'],
       link: '/portfolio/3d-mockups'
+    },
+    {
+      id: 7,
+      title: 'Sticker Creations',
+      category: 'graphics',
+      description: 'Creative sticker designs for brands, events, and promotional campaigns with unique visual appeal.',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+      tags: ['Sticker Design', 'Graphics', 'Brand Materials'],
+      link: '/portfolio/sticker-creations'
     }
   ];
 

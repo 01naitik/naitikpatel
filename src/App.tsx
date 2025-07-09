@@ -16,6 +16,7 @@ import LogoCollection from "./pages/portfolio/LogoCollection";
 import YouTubeLayouts from "./pages/portfolio/YouTubeLayouts";
 import EcommerceWebsite from "./pages/portfolio/EcommerceWebsite";
 import ThreeDMockups from "./pages/portfolio/ThreeDMockups";
+import StickerCreations from "./pages/portfolio/StickerCreations";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/portfolio/youtube-layouts" element={<YouTubeLayouts />} />
           <Route path="/portfolio/ecommerce-website" element={<EcommerceWebsite />} />
           <Route path="/portfolio/3d-mockups" element={<ThreeDMockups />} />
+          <Route path="/portfolio/sticker-creations" element={<StickerCreations />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

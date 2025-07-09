@@ -11,36 +11,54 @@ const YouTubeLayouts = () => {
     setIsVisible(true);
   }, []);
 
-  const workItems = [
+  const thumbnailItems = [
     {
       id: 1,
-      title: 'Stream Overlays',
-      description: 'Custom overlay designs for live streaming platforms',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+      title: 'Gaming Thumbnail Design',
+      description: 'High-energy gaming thumbnail with vibrant colors and bold text',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
     },
     {
       id: 2,
-      title: 'Chat Box Frames',
-      description: 'Interactive chat display frames and webcam borders',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      title: 'Tech Review Thumbnail',
+      description: 'Clean and modern thumbnail design for technology reviews',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
     },
     {
       id: 3,
-      title: 'Animated Alerts',
-      description: 'Dynamic notification alerts for followers and donations',
+      title: 'Lifestyle Vlog Thumbnail',
+      description: 'Warm and inviting thumbnail for lifestyle content',
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
     },
     {
       id: 4,
-      title: 'Stream Banners',
-      description: 'Professional banners and panel designs for stream profiles',
+      title: 'Educational Content Thumbnail',
+      description: 'Professional and informative thumbnail design',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
     },
     {
       id: 5,
-      title: 'Thumbnail Templates',
-      description: 'Eye-catching thumbnail designs for YouTube videos',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      title: 'Music Video Thumbnail',
+      description: 'Creative and artistic thumbnail for music content',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+    },
+    {
+      id: 6,
+      title: 'Comedy Skit Thumbnail',
+      description: 'Fun and engaging thumbnail with expressive design',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+    },
+    {
+      id: 7,
+      title: 'Tutorial Thumbnail',
+      description: 'Clear and instructional thumbnail design',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+    },
+    {
+      id: 8,
+      title: 'Stream Layout Design',
+      description: 'Complete streaming overlay and layout package',
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
     }
   ];
 
@@ -61,13 +79,13 @@ const YouTubeLayouts = () => {
           </div>
 
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight">YouTube Stream Layouts</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-6 tracking-tight">YouTube Thumbnails and Layouts</h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Complete streaming package with chat boxes, webcam frames, animated alerts, banners, and thumbnails.
+              Eye-catching YouTube thumbnails and streaming layouts designed to boost engagement and views.
             </p>
             
             <div className="flex flex-wrap gap-2 mb-12">
-              {['Stream Design', 'Motion Graphics', 'UI Design'].map((tag) => (
+              {['Thumbnail Design', 'YouTube', 'Graphics'].map((tag) => (
                 <span key={tag} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm">
                   {tag}
                 </span>
@@ -79,22 +97,22 @@ const YouTubeLayouts = () => {
             <div className="mb-12">
               <img 
                 src="https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg" 
-                alt="YouTube Stream Layouts"
+                alt="YouTube Thumbnails and Layouts"
                 className="w-full rounded-2xl shadow-lg"
               />
             </div>
           </div>
 
-          {/* Work Items Section */}
+          {/* Thumbnail Collection Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
-              <h2 className="text-3xl font-light mb-8 tracking-tight">Streaming Assets</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {workItems.map((item, index) => (
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Thumbnail Collection</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {thumbnailItems.map((item, index) => (
                   <div 
                     key={item.id}
                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                    style={{ animationDelay: `${index * 100}ms` }}
+                    style={{ animationDelay: `${index * 50}ms` }}
                   >
                     <div className="h-48 overflow-hidden">
                       <img 
@@ -118,18 +136,18 @@ const YouTubeLayouts = () => {
               <div>
                 <h2 className="text-2xl font-medium mb-4">Project Overview</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  A comprehensive streaming package designed for content creators who want to elevate their YouTube 
-                  and Twitch presence. The package includes all essential elements for professional-looking streams.
+                  A comprehensive collection of YouTube thumbnails and streaming layouts designed to capture attention 
+                  and increase click-through rates. Each design is optimized for maximum visual impact.
                 </p>
               </div>
               <div>
-                <h2 className="text-2xl font-medium mb-4">Package Includes</h2>
+                <h2 className="text-2xl font-medium mb-4">Design Features</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Custom overlay designs</li>
-                  <li>• Chat box and webcam frames</li>
-                  <li>• Animated alerts and notifications</li>
-                  <li>• Stream banners and panels</li>
-                  <li>• Thumbnail templates</li>
+                  <li>• High-contrast color schemes</li>
+                  <li>• Bold typography and text placement</li>
+                  <li>• Eye-catching visual elements</li>
+                  <li>• Optimized for mobile viewing</li>
+                  <li>• Brand-consistent designs</li>
                 </ul>
               </div>
             </div>
@@ -137,9 +155,9 @@ const YouTubeLayouts = () => {
 
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} text-center`}>
             <div className="bg-gray-50 rounded-2xl p-12">
-              <h2 className="text-3xl font-light mb-4 tracking-tight">Ready to Stream in Style?</h2>
+              <h2 className="text-3xl font-light mb-4 tracking-tight">Need YouTube Thumbnails?</h2>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                Let's create a custom streaming package that makes your content stand out.
+                Let's create compelling thumbnails that drive clicks and grow your channel.
               </p>
               <a
                 href="mailto:naitikpatel1312@gmail.com"
