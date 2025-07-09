@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,49 +15,49 @@ const YouTubeLayouts = () => {
       id: 1,
       title: 'Gaming Thumbnail Design',
       description: 'High-energy gaming thumbnail with vibrant colors and bold text',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/9fJ3F3y4/0b80e1184192119-67977521495cb.jpg'
     },
     {
       id: 2,
       title: 'Tech Review Thumbnail',
       description: 'Clean and modern thumbnail design for technology reviews',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/T2yPSQXj/2e0500184192119-679775214a8bb.jpg'
     },
     {
       id: 3,
       title: 'Lifestyle Vlog Thumbnail',
       description: 'Warm and inviting thumbnail for lifestyle content',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/fRvWXrxs/4c7a14184192119-679775214a17d.jpg'
     },
     {
       id: 4,
       title: 'Educational Content Thumbnail',
       description: 'Professional and informative thumbnail design',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/d1hJbQgQ/345bc8184192119-654cfef2b5e3d.jpg'
     },
     {
       id: 5,
       title: 'Music Video Thumbnail',
       description: 'Creative and artistic thumbnail for music content',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/W1sT2wxH/a55d47184192119-67977525723de.jpg'
     },
     {
       id: 6,
       title: 'Comedy Skit Thumbnail',
       description: 'Fun and engaging thumbnail with expressive design',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/MTSY4XnV/b02d7a184192119-1-679775208a1e7.jpg'
     },
     {
       id: 7,
       title: 'Tutorial Thumbnail',
       description: 'Clear and instructional thumbnail design',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/c4HBPpL9/bcdcdd184192119-654cfef36b2ea.jpg'
     },
     {
       id: 8,
       title: 'Stream Layout Design',
       description: 'Complete streaming overlay and layout package',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
+      image: 'https://i.postimg.cc/4NSQGWKJ/fe2490184192119-654d00d22c115.jpg'
     }
   ];
 
