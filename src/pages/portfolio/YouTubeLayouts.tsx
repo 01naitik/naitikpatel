@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,49 +16,49 @@ const YouTubeLayouts = () => {
       id: 1,
       title: 'Gaming Thumbnail Design',
       description: 'High-energy gaming thumbnail with vibrant colors and bold text',
-      image: 'https://i.postimg.cc/9fJ3F3y4/0b80e1184192119-67977521495cb.jpg'
+      image: 'https://i.imghippo.com/files/Llo9145Uw.jpg'
     },
     {
       id: 2,
       title: 'Tech Review Thumbnail',
       description: 'Clean and modern thumbnail design for technology reviews',
-      image: 'https://i.postimg.cc/T2yPSQXj/2e0500184192119-679775214a8bb.jpg'
+      image: 'https://i.imghippo.com/files/qeEw9687WHc.jpg'
     },
     {
       id: 3,
       title: 'Lifestyle Vlog Thumbnail',
       description: 'Warm and inviting thumbnail for lifestyle content',
-      image: 'https://i.postimg.cc/fRvWXrxs/4c7a14184192119-679775214a17d.jpg'
+      image: 'https://i.imghippo.com/files/Zoj6521lLg.jpg'
     },
     {
       id: 4,
       title: 'Educational Content Thumbnail',
       description: 'Professional and informative thumbnail design',
-      image: 'https://i.postimg.cc/d1hJbQgQ/345bc8184192119-654cfef2b5e3d.jpg'
+      image: 'https://i.imghippo.com/files/Uq5578wI.jpg'
     },
     {
       id: 5,
       title: 'Music Video Thumbnail',
       description: 'Creative and artistic thumbnail for music content',
-      image: 'https://i.postimg.cc/W1sT2wxH/a55d47184192119-67977525723de.jpg'
+      image: 'https://i.imghippo.com/files/LCo5280Ew.jpg'
     },
     {
       id: 6,
       title: 'Comedy Skit Thumbnail',
       description: 'Fun and engaging thumbnail with expressive design',
-      image: 'https://i.postimg.cc/MTSY4XnV/b02d7a184192119-1-679775208a1e7.jpg'
+      image: 'https://i.imghippo.com/files/vtE4931cY.jpg'
     },
     {
       id: 7,
       title: 'Tutorial Thumbnail',
       description: 'Clear and instructional thumbnail design',
-      image: 'https://i.postimg.cc/c4HBPpL9/bcdcdd184192119-654cfef36b2ea.jpg'
+      image: 'https://i.imghippo.com/files/cDyJ9787NC.jpg'
     },
     {
       id: 8,
       title: 'Stream Layout Design',
       description: 'Complete streaming overlay and layout package',
-      image: 'https://i.postimg.cc/4NSQGWKJ/fe2490184192119-654d00d22c115.jpg'
+      image: 'https://i.imghippo.com/files/dPO9146Aac.jpg'
     }
   ];
 
@@ -106,18 +107,19 @@ const YouTubeLayouts = () => {
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">Thumbnail Collection</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {thumbnailItems.map((item, index) => (
                   <div 
                     key={item.id}
                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="h-48 overflow-hidden">
+                    <div className="aspect-video overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-4">
