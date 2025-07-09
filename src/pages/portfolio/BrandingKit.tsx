@@ -14,33 +14,39 @@ const BrandingKit = () => {
   const workItems = [
     {
       id: 1,
-      title: 'Logo Variations',
-      description: 'Primary and secondary logo designs with different orientations',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
+      title: 'Logo / Stamp Design',
+      description: 'Primary logo design with elegant typography and artistic elements',
+      image: 'https://i.postimg.cc/tTcS1BsN/Whats-App-Image-2025-06-24-at-2-52-16-PM-1.jpg'
     },
     {
       id: 2,
-      title: 'Business Card Design',
-      description: 'Professional business card layout with brand elements',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
+      title: 'Logo / Stamp Design',
+      description: 'Alternative logo variation with refined stamp aesthetic',
+      image: 'https://i.postimg.cc/rpZXJCdK/Whats-App-Image-2025-06-24-at-2-52-16-PM-2.jpg'
     },
     {
       id: 3,
-      title: 'Brand Style Guide',
-      description: 'Comprehensive guide including colors, typography, and usage',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      title: 'Business Card - Front',
+      description: 'Professional business card front design with brand elements',
+      image: 'https://i.postimg.cc/VNCBGzvn/Blush-Pink-Typography-Nail-Artist-Business-Card-1-page-0001.jpg'
     },
     {
       id: 4,
-      title: 'Letterhead Design',
-      description: 'Professional letterhead incorporating brand identity',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+      title: 'Business Card - Back',
+      description: 'Business card back design with contact information layout',
+      image: 'https://i.postimg.cc/bNrnVqFr/Blush-Pink-Typography-Nail-Artist-Business-Card-1-page-0002.jpg'
     },
     {
       id: 5,
-      title: 'Brand Mockups',
-      description: 'Real-world application mockups of the brand identity',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      title: 'Thank You Card',
+      description: 'Elegant thank you card design incorporating brand identity',
+      image: 'https://i.postimg.cc/SRpZ7JGn/Whats-App-Image-2025-06-22-at-8-43-41-AM.jpg'
+    },
+    {
+      id: 6,
+      title: 'Certificate of Authenticity',
+      description: 'Professional certificate design for artwork authentication',
+      image: 'https://i.postimg.cc/vmk2TPgL/Certificate-Of-auth-2-page-0001.jpg'
     }
   ];
 
@@ -132,9 +138,10 @@ const BrandingKit = () => {
                 <ul className="text-gray-600 space-y-2">
                   <li>• Primary and secondary logo variations</li>
                   <li>• Business card design and layout</li>
+                  <li>• Thank you card design</li>
+                  <li>• Certificate of authenticity template</li>
                   <li>• Brand style guide and color palette</li>
                   <li>• Typography guidelines</li>
-                  <li>• Brand application mockups</li>
                 </ul>
               </div>
             </div>
