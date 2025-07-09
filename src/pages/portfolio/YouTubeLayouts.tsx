@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,50 +13,34 @@ const YouTubeLayouts = () => {
   const thumbnailItems = [
     {
       id: 1,
-      title: 'Gaming Thumbnail Design',
-      description: 'High-energy gaming thumbnail with vibrant colors and bold text',
       image: 'https://i.imghippo.com/files/Llo9145Uw.jpg'
     },
     {
       id: 2,
-      title: 'Tech Review Thumbnail',
-      description: 'Clean and modern thumbnail design for technology reviews',
       image: 'https://i.imghippo.com/files/qeEw9687WHc.jpg'
     },
     {
       id: 3,
-      title: 'Lifestyle Vlog Thumbnail',
-      description: 'Warm and inviting thumbnail for lifestyle content',
       image: 'https://i.imghippo.com/files/Zoj6521lLg.jpg'
     },
     {
       id: 4,
-      title: 'Educational Content Thumbnail',
-      description: 'Professional and informative thumbnail design',
       image: 'https://i.imghippo.com/files/Uq5578wI.jpg'
     },
     {
       id: 5,
-      title: 'Music Video Thumbnail',
-      description: 'Creative and artistic thumbnail for music content',
       image: 'https://i.imghippo.com/files/LCo5280Ew.jpg'
     },
     {
       id: 6,
-      title: 'Comedy Skit Thumbnail',
-      description: 'Fun and engaging thumbnail with expressive design',
       image: 'https://i.imghippo.com/files/vtE4931cY.jpg'
     },
     {
       id: 7,
-      title: 'Tutorial Thumbnail',
-      description: 'Clear and instructional thumbnail design',
       image: 'https://i.imghippo.com/files/cDyJ9787NC.jpg'
     },
     {
       id: 8,
-      title: 'Stream Layout Design',
-      description: 'Complete streaming overlay and layout package',
       image: 'https://i.imghippo.com/files/dPO9146Aac.jpg'
     }
   ];
@@ -111,21 +94,15 @@ const YouTubeLayouts = () => {
                 {thumbnailItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="aspect-video overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
-                    </div>
+                    <img 
+                      src={item.image} 
+                      alt={`Thumbnail ${item.id}`}
+                      className="w-full h-auto hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>
