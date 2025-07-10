@@ -14,15 +14,21 @@ const ThreeDMockups = () => {
   const workItems = [
     {
       id: 1,
-      title: 'Product Packaging Mockup',
-      description: '3D rendered packaging designs for consumer products with realistic lighting',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      title: 'T-Shirt 3D Mockup',
+      description: '3D rendered t-shirt mockup with realistic lighting and textures',
+      image: 'https://i.imghippo.com/files/ssm3274OQ.png'
     },
     {
       id: 2,
-      title: 'Brand Application Mockup',
-      description: 'Realistic brand application mockups in 3D environments with custom materials',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      title: 'Gaming Character – Valorant Jett',
+      description: '3D character design and modeling for Valorant Jett character',
+      image: 'https://i.imghippo.com/files/GpLJ5268J.png'
+    },
+    {
+      id: 3,
+      title: 'Gaming Character – Valorant Neon',
+      description: '3D character design and modeling for Valorant Neon character',
+      image: 'https://i.imghippo.com/files/ScD5415YEU.png'
     }
   ];
 
@@ -71,7 +77,7 @@ const ThreeDMockups = () => {
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">3D Design Showcase</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {workItems.map((item, index) => (
                   <div 
                     key={item.id}

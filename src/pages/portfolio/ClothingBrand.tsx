@@ -14,39 +14,39 @@ const ClothingBrand = () => {
   const workItems = [
     {
       id: 1,
-      title: 'T-Shirt Design Collection',
-      description: 'Creative apparel designs with unique graphics and typography',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+      title: 'T-Shirt 3D Mockup',
+      description: 'Professional 3D mockup showcasing t-shirt design in realistic environment',
+      image: 'https://i.imghippo.com/files/cgnj3134Yd.png'
     },
     {
       id: 2,
-      title: 'Brand Identity Package',
-      description: 'Complete brand identity including logo and visual guidelines',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+      title: 'Promotional Poster',
+      description: 'Eye-catching promotional poster design for brand marketing',
+      image: 'https://i.imghippo.com/files/Eri6184s.png'
     },
     {
       id: 3,
-      title: 'Marketing Materials',
-      description: 'Eye-catching promotional materials for brand campaigns',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      title: 'T-Shirt Design – Believe in Magic',
+      description: 'Inspirational t-shirt design with magical theme and typography',
+      image: 'https://i.imghippo.com/files/qEBa1863mo.png'
     },
     {
       id: 4,
-      title: 'Merchandise Design',
-      description: 'Brand merchandise and promotional items design',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      title: 'T-Shirt Design – Coffee & Cat',
+      description: 'Fun and playful t-shirt design combining coffee and cat themes',
+      image: 'https://i.imghippo.com/files/MSnL4846Smk.png'
     },
     {
       id: 5,
-      title: '3D Product Mockups',
-      description: 'Realistic 3D renderings of apparel and merchandise',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+      title: 'T-Shirt Design – Stay Curious',
+      description: 'Motivational t-shirt design encouraging curiosity and exploration',
+      image: 'https://i.imghippo.com/files/gSv5407JkM.png'
     },
     {
       id: 6,
-      title: 'Digital Presence',
-      description: 'Complete e-commerce website design and layout',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      title: 'T-Shirt Design – Abstract Typographic',
+      description: 'Modern abstract typography design for contemporary apparel',
+      image: 'https://i.imghippo.com/files/wR1363kzw.jpeg'
     }
   ];
 

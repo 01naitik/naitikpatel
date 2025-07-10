@@ -14,51 +14,35 @@ const StickerCreations = () => {
   const stickerItems = [
     {
       id: 1,
-      title: 'Brand Logo Stickers',
-      description: 'Professional brand logo stickers for promotional use',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/EIP8674WkU.jpg'
     },
     {
       id: 2,
-      title: 'Event Promotional Stickers',
-      description: 'Eye-catching stickers designed for event promotion',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/EyJT4385gcU.jpeg'
     },
     {
       id: 3,
-      title: 'Custom Illustration Stickers',
-      description: 'Unique illustrated stickers with creative designs',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/IPim4554FBs.jpeg'
     },
     {
       id: 4,
-      title: 'Typography Stickers',
-      description: 'Bold typography-based sticker designs',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/gAHG4511VD.jpeg'
     },
     {
       id: 5,
-      title: 'Social Media Stickers',
-      description: 'Fun stickers perfect for social media campaigns',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/Lg1643Q.jpg'
     },
     {
       id: 6,
-      title: 'Product Label Stickers',
-      description: 'Professional product labeling and packaging stickers',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/GYd7211NBs.jpg'
     },
     {
       id: 7,
-      title: 'Motivational Stickers',
-      description: 'Inspiring and motivational sticker designs',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/dGH5305JC.png'
     },
     {
       id: 8,
-      title: 'Character Stickers',
-      description: 'Fun character-based sticker illustrations',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/iK9162PIU.jpeg'
     }
   ];
 
@@ -111,20 +95,15 @@ const StickerCreations = () => {
                 {stickerItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
-                    </div>
+                    <img 
+                      src={item.image} 
+                      alt={`Sticker ${item.id}`}
+                      className="w-full h-auto hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
                   </div>
                 ))}
               </div>

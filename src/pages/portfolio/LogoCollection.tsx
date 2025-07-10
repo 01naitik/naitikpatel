@@ -11,42 +11,38 @@ const LogoCollection = () => {
     setIsVisible(true);
   }, []);
 
-  const workItems = [
+  const logoItems = [
     {
       id: 1,
-      title: 'Tech Company Logo',
-      description: 'Modern minimalist logo for technology startup',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/PlYY3144jek.png'
     },
     {
       id: 2,
-      title: 'Healthcare Brand',
-      description: 'Professional healthcare and medical service logo',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/UdGL3950Sao.jpg'
     },
     {
       id: 3,
-      title: 'Creative Studio',
-      description: 'Artistic and creative logo for design studio',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/CQvP4491dg.jpeg'
     },
     {
       id: 4,
-      title: 'Retail & E-commerce',
-      description: 'Brand identity for retail and online business',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/tppP2708DGY.png'
     },
     {
       id: 5,
-      title: 'Restaurant Brand',
-      description: 'Elegant logo design for fine dining restaurant',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/sxcV9538UHc.png'
     },
     {
       id: 6,
-      title: 'Fitness Center',
-      description: 'Dynamic and energetic fitness brand logo',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop'
+      image: 'https://i.imghippo.com/files/nlAv4493DQ.png'
+    },
+    {
+      id: 7,
+      image: 'https://i.imghippo.com/files/nJb9536MGI.jpg'
+    },
+    {
+      id: 8,
+      image: 'https://i.imghippo.com/files/lQM4769rhI.png'
     }
   ];
 
@@ -98,24 +94,18 @@ const LogoCollection = () => {
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">Logo Design Portfolio</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {workItems.map((item, index) => (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {logoItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center justify-center aspect-square"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
-                    </div>
+                    <img 
+                      src={item.image} 
+                      alt={`Logo ${item.id}`}
+                      className="max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                 ))}
               </div>

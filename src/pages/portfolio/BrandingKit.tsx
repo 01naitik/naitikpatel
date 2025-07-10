@@ -16,37 +16,37 @@ const BrandingKit = () => {
       id: 1,
       title: 'Logo / Stamp Design',
       description: 'Primary logo design with elegant typography and artistic elements',
-      image: 'https://i.postimg.cc/tTcS1BsN/Whats-App-Image-2025-06-24-at-2-52-16-PM-1.jpg'
+      image: 'https://i.imghippo.com/files/tBPJ2525Pog.jpeg'
     },
     {
       id: 2,
       title: 'Logo / Stamp Design',
       description: 'Alternative logo variation with refined stamp aesthetic',
-      image: 'https://i.postimg.cc/rpZXJCdK/Whats-App-Image-2025-06-24-at-2-52-16-PM-2.jpg'
+      image: 'https://i.imghippo.com/files/PnT2834BSc.jpeg'
     },
     {
       id: 3,
       title: 'Business Card - Front',
       description: 'Professional business card front design with brand elements',
-      image: 'https://i.postimg.cc/VNCBGzvn/Blush-Pink-Typography-Nail-Artist-Business-Card-1-page-0001.jpg'
+      image: 'https://i.imghippo.com/files/YWpa1359Uw.jpg'
     },
     {
       id: 4,
       title: 'Business Card - Back',
       description: 'Business card back design with contact information layout',
-      image: 'https://i.postimg.cc/bNrnVqFr/Blush-Pink-Typography-Nail-Artist-Business-Card-1-page-0002.jpg'
+      image: 'https://i.imghippo.com/files/DGyq4938RTc.jpg'
     },
     {
       id: 5,
       title: 'Thank You Card',
       description: 'Elegant thank you card design incorporating brand identity',
-      image: 'https://i.postimg.cc/SRpZ7JGn/Whats-App-Image-2025-06-22-at-8-43-41-AM.jpg'
+      image: 'https://i.imghippo.com/files/tKIp7070DM.jpeg'
     },
     {
       id: 6,
       title: 'Certificate of Authenticity',
       description: 'Professional certificate design for artwork authentication',
-      image: 'https://i.postimg.cc/vmk2TPgL/Certificate-Of-auth-2-page-0001.jpg'
+      image: 'https://i.imghippo.com/files/OV1667IKo.jpg'
     }
   ];
 
