@@ -115,6 +115,13 @@ const EcommerceWebsite = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Confidentiality Note */}
+            <div className="mb-12 p-6 bg-gray-50 rounded-lg">
+              <p className="text-sm text-gray-500 italic leading-relaxed">
+                <strong>Note:</strong> These images are layouts and examples of my work, not the actual websites I developed. Due to client confidentiality agreements, I am not permitted to showcase their real products.
+              </p>
+            </div>
           </div>
 
           <div className={`transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} text-center`}>

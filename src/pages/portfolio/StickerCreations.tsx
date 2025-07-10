@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -80,9 +79,10 @@ const StickerCreations = () => {
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop" 
-                alt="Sticker Creations"
-                className="w-full rounded-2xl shadow-lg"
+                src="https://i.imghippo.com/files/p4952Uds.jpeg" 
+                alt="Featured Sticker Design"
+                className="w-full rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => window.open('https://i.imghippo.com/files/p4952Uds.jpeg', '_blank')}
               />
             </div>
           </div>
@@ -95,8 +95,9 @@ const StickerCreations = () => {
                 {stickerItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 50}ms` }}
+                    onClick={() => window.open(item.image, '_blank')}
                   >
                     <img 
                       src={item.image} 

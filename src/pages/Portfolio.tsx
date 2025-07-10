@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -53,7 +52,7 @@ const Portfolio = () => {
       title: 'YouTube Thumbnails and Layouts',
       category: 'graphics',
       description: 'Eye-catching YouTube thumbnails and streaming layouts designed to boost engagement and views.',
-      image: 'https://i.postimg.cc/6QscfD5n/Whats-App-Image-2025-07-07-at-7-25-02-PM.jpg',
+      image: 'https://i.imghippo.com/files/Ayc6645Qk.jpeg',
       tags: ['Thumbnail Design', 'YouTube', 'Graphics'],
       link: '/portfolio/youtube-layouts'
     },
