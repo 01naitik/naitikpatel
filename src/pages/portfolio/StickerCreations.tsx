@@ -2,13 +2,26 @@ import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
+import Lightbox from '../../components/Lightbox';
 
 const StickerCreations = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState('');
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleImageClick = (imageUrl: string) => {
+    setLightboxImage(imageUrl);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setLightboxImage('');
+  };
 
   const stickerItems = [
     {
@@ -82,12 +95,11 @@ const StickerCreations = () => {
                 src="https://i.imghippo.com/files/p4952Uds.jpeg" 
                 alt="Featured Sticker Design"
                 className="w-full rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
-                onClick={() => window.open('https://i.imghippo.com/files/p4952Uds.jpeg', '_blank')}
+                onClick={() => handleImageClick('https://i.imghippo.com/files/p4952Uds.jpeg')}
               />
             </div>
           </div>
 
-          {/* Sticker Collection Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">Sticker Collection</h2>
@@ -97,7 +109,7 @@ const StickerCreations = () => {
                     key={item.id}
                     className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 50}ms` }}
-                    onClick={() => window.open(item.image, '_blank')}
+                    onClick={() => handleImageClick(item.image)}
                   >
                     <img 
                       src={item.image} 
@@ -150,6 +162,12 @@ const StickerCreations = () => {
           </div>
         </div>
       </div>
+
+      <Lightbox 
+        isOpen={isLightboxOpen}
+        imageUrl={lightboxImage}
+        onClose={closeLightbox}
+      />
     </div>
   );
 };

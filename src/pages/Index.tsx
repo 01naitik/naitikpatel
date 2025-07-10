@@ -11,6 +11,17 @@ const Index = () => {
 
   useEffect(() => {
     setIsVisible(true);
+    
+    // Add Google Font for Dancing Script
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+    
+    return () => {
+      // Cleanup on unmount
+      document.head.removeChild(link);
+    };
   }, []);
 
   const portfolioItems = [

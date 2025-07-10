@@ -1,14 +1,28 @@
+
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
+import Lightbox from '../../components/Lightbox';
 
 const EcommerceWebsite = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState('');
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleImageClick = (imageUrl: string) => {
+    setLightboxImage(imageUrl);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setLightboxImage('');
+  };
 
   const workItems = [
     {
@@ -61,12 +75,12 @@ const EcommerceWebsite = () => {
               <img 
                 src="https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg" 
                 alt="E-commerce Website"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => handleImageClick('https://i.postimg.cc/Z5C1CtCS/Whats-App-Image-2025-07-07-at-7-02-59-PM.jpg')}
               />
             </div>
           </div>
 
-          {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">Website Showcase</h2>
@@ -76,7 +90,7 @@ const EcommerceWebsite = () => {
                     key={item.id}
                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 100}ms` }}
-                    onClick={() => window.open(item.image, '_blank')}
+                    onClick={() => handleImageClick(item.image)}
                   >
                     <div className="h-64 overflow-hidden">
                       <img 
@@ -116,7 +130,6 @@ const EcommerceWebsite = () => {
               </div>
             </div>
 
-            {/* Confidentiality Note */}
             <div className="mb-12 p-6 bg-gray-50 rounded-lg">
               <p className="text-sm text-gray-500 italic leading-relaxed">
                 <strong>Note:</strong> These images are layouts and examples of my work, not the actual websites I developed. Due to client confidentiality agreements, I am not permitted to showcase their real products.
@@ -140,6 +153,12 @@ const EcommerceWebsite = () => {
           </div>
         </div>
       </div>
+
+      <Lightbox 
+        isOpen={isLightboxOpen}
+        imageUrl={lightboxImage}
+        onClose={closeLightbox}
+      />
     </div>
   );
 };

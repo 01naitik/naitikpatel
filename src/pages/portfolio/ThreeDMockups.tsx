@@ -2,13 +2,26 @@ import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
+import Lightbox from '../../components/Lightbox';
 
 const ThreeDMockups = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState('');
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleImageClick = (imageUrl: string) => {
+    setLightboxImage(imageUrl);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setLightboxImage('');
+  };
 
   const workItems = [
     {
@@ -73,12 +86,12 @@ const ThreeDMockups = () => {
               <img 
                 src="https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg" 
                 alt="3D Product Mockups"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={() => handleImageClick('https://i.postimg.cc/hPYWfxGr/mokupdesign.jpg')}
               />
             </div>
           </div>
 
-          {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
               <h2 className="text-3xl font-light mb-8 tracking-tight">3D Design Showcase</h2>
@@ -88,7 +101,7 @@ const ThreeDMockups = () => {
                     key={item.id}
                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 200}ms` }}
-                    onClick={() => window.open(item.image, '_blank')}
+                    onClick={() => handleImageClick(item.image)}
                   >
                     <div className="h-64 overflow-hidden">
                       <img 
@@ -145,6 +158,12 @@ const ThreeDMockups = () => {
           </div>
         </div>
       </div>
+
+      <Lightbox 
+        isOpen={isLightboxOpen}
+        imageUrl={lightboxImage}
+        onClose={closeLightbox}
+      />
     </div>
   );
 };
