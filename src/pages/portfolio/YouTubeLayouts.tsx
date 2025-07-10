@@ -41,7 +41,19 @@ const YouTubeLayouts = () => {
     },
     {
       id: 8,
-      image: 'https://i.imghippo.com/files/dPO9146Aac.jpg'
+      image: 'https://i.imghippo.com/files/Ayc6645Qk.jpeg'
+    },
+    {
+      id: 9,
+      image: 'https://i.imghippo.com/files/pR6905Z.jpg'
+    },
+    {
+      id: 10,
+      image: 'https://i.imghippo.com/files/bMC9661oc.jpg'
+    },
+    {
+      id: 11,
+      image: 'https://i.imghippo.com/files/pja3445YLI.png'
     }
   ];
 
@@ -94,8 +106,9 @@ const YouTubeLayouts = () => {
                 {thumbnailItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 50}ms` }}
+                    onClick={() => window.open(item.image, '_blank')}
                   >
                     <img 
                       src={item.image} 

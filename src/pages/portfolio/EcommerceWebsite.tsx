@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,33 +13,15 @@ const EcommerceWebsite = () => {
   const workItems = [
     {
       id: 1,
-      title: 'Homepage Design',
-      description: 'Modern landing page with product showcases and navigation',
-      image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=300&fit=crop'
+      title: 'E-commerce Website Design',
+      description: 'Complete e-commerce website design with modern interface',
+      image: 'https://i.imghippo.com/files/AAB6734HBk.jpeg'
     },
     {
       id: 2,
-      title: 'Product Catalog',
-      description: 'Organized product listing with filters and search functionality',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'
-    },
-    {
-      id: 3,
-      title: 'Shopping Cart',
-      description: 'Intuitive cart design with secure checkout process',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop'
-    },
-    {
-      id: 4,
-      title: 'Mobile Experience',
-      description: 'Responsive design optimized for mobile shopping',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop'
-    },
-    {
-      id: 5,
-      title: 'Admin Dashboard',
-      description: 'Backend interface for inventory and order management',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop'
+      title: 'E-commerce Platform Layout',
+      description: 'Professional e-commerce platform with optimized user experience',
+      image: 'https://i.imghippo.com/files/SBs2501f.jpeg'
     }
   ];
 
@@ -88,24 +69,25 @@ const EcommerceWebsite = () => {
           {/* Work Items Section */}
           <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="mb-12">
-              <h2 className="text-3xl font-light mb-8 tracking-tight">Website Features</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <h2 className="text-3xl font-light mb-8 tracking-tight">Website Showcase</h2>
+              <div className="grid md:grid-cols-2 gap-8">
                 {workItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 100}ms` }}
+                    onClick={() => window.open(item.image, '_blank')}
                   >
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-64 overflow-hidden">
                       <img 
                         src={item.image} 
                         alt={item.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                    <div className="p-6">
+                      <h3 className="text-xl font-medium mb-3">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>
                 ))}

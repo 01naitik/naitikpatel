@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -29,6 +28,12 @@ const ThreeDMockups = () => {
       title: 'Gaming Character – Valorant Neon',
       description: '3D character design and modeling for Valorant Neon character',
       image: 'https://i.imghippo.com/files/ScD5415YEU.png'
+    },
+    {
+      id: 4,
+      title: 'High-Quality 3D Render – Product Showcase',
+      description: 'Professional 3D render showcasing product design capabilities',
+      image: 'https://i.imghippo.com/files/UPJ1456Mzc.webp'
     }
   ];
 
@@ -81,8 +86,9 @@ const ThreeDMockups = () => {
                 {workItems.map((item, index) => (
                   <div 
                     key={item.id}
-                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
                     style={{ animationDelay: `${index * 200}ms` }}
+                    onClick={() => window.open(item.image, '_blank')}
                   >
                     <div className="h-64 overflow-hidden">
                       <img 

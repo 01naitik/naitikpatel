@@ -80,7 +80,7 @@ const Portfolio = () => {
       title: 'Sticker Creations',
       category: 'graphics',
       description: 'Creative sticker designs for brands, events, and promotional campaigns with unique visual appeal.',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop',
+      image: 'https://i.imghippo.com/files/p4952Uds.jpeg',
       tags: ['Sticker Design', 'Graphics', 'Brand Materials'],
       link: '/portfolio/sticker-creations'
     }
