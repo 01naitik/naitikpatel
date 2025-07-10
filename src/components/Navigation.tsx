@@ -22,8 +22,8 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-3xl font-light tracking-tight italic">
-            NP
+          <Link to="/" className="text-2xl md:text-3xl font-cursive font-medium tracking-wide hover:text-gray-700 transition-colors duration-300">
+            Naitik Patel
           </Link>
 
           {/* Desktop Navigation */}
